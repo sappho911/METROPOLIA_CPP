@@ -17,6 +17,7 @@ int main() {
 
     printf("You have %.2f euros left. \n", money );
 
+
     while (enough_money) {
 
         if (money < bus_price && money < taxi_price) {
