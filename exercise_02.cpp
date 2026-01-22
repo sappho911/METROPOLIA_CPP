@@ -23,6 +23,9 @@ int main() {
   printf("You entered income limit: %.d\n", income_limit);
   printf("You entered income over the limit %.f\n", over_limit_rate);
 
+  tax_rate  /= 100.0;
+  over_limit_rate /= 100.0;
+
   for (int i = 0; i < MONTHS; i++) {
     printf("Enter income for month %d : ", i + 1);
     scanf("%f", &income[i]);
@@ -48,9 +51,9 @@ int main() {
     tax[i] = monthly_tax;
     total_income += income[i];
   }
-  printf("%5.s %10s %10s\n", "month", "income", "tax");
+  printf("%5s %10s %10s\n", "month", "income", "tax");
 
   for (int i = 0; i < MONTHS; i++) {
-    printf("%5d %10.2f %3.2f\n", i+1, income[i], tax[i]);
+    printf("%5d %10.2f %10.2f\n", i+1, income[i], tax[i]);
   }
 }
