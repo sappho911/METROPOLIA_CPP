@@ -38,11 +38,6 @@ int main(void) {
 
             case 1:
                 printf("You chose bus. \n");
-                if (money < bus_price && money < taxi_price) {
-            printf("You need to walk. Bye.");
-            enough_money = false;
-            break;
-        }
                 if (money >= bus_price) {
                     money -= bus_price;
                     printf("You have %.2f euros left. \n", money );
