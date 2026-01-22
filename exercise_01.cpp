@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main(void) {
+int main() {
 
     float bus_price  = 0;
     float taxi_price = 0;
@@ -19,6 +19,12 @@ int main(void) {
 
     while (enough_money) {
 
+        if (money < bus_price && money < taxi_price) {
+            printf("You need to walk. Bye.");
+            enough_money = false;
+            break;
+        }
+
         printf("Do you want to take \n");
         printf("1) Bus (%.2f)\n", bus_price);
         printf("2) Taxi (%.2f)\n", taxi_price);
@@ -26,14 +32,7 @@ int main(void) {
         printf("Enter your selection: ");
         scanf("%d", &selection);
 
-        if (money < bus_price && money < taxi_price) {
-            printf("You need to walk. Bye.");
-            enough_money = false;
-            break;
-        }
-
         switch (selection) {
-
             case 1:
                 printf("You chose bus. \n");
                 if (money >= bus_price) {
