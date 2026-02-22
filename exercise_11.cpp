@@ -1,13 +1,31 @@
 #include <stdio.h>
-#include <string.h>
 
-#define STR_SIZE 32
+int replace_char(char *str, const char *repl);
 
 int main() {
-    char* str = "Hello World!";
-    char* str2 = "Hello World!";
 
-    printf("%d",strcmp(str, str2));
+    char text[80] = "I am so tired of Python. C is much better language";
+    int count = replace_char(text, "e3");
 
     return 0;
+}
+
+int replace_char(char *str, const char *repl) {
+    int i;
+    int count = 0;
+
+    for (i = 0; str[i] != '\0'; i++) {
+
+        if (str[i] == repl[0]) {
+            str[i] = repl[1];
+            count++;
+        }
+    }
+
+    if (count == 0) {
+        printf("No characters were found! \n");
+    }
+
+    printf("Replaced %d charachters\n%s\n", count, str);
+    return count;
 }

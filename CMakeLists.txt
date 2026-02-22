@@ -12,4 +12,5 @@ add_executable(METROPOLIA_CPP exercise_01.cpp
         exercise_07.cpp
         exercise_08.cpp
         exercise_09.cpp
-        exercise_10.cpp)
+        exercise_10.cpp
+        exercise_11.cpp)
