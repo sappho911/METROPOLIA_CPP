@@ -4,7 +4,7 @@ int replace_char(char *str, const char *repl);
 
 int main() {
 
-    char text[80] = "I am so tired of Python. C is much better languagee";
+    char text[80] = "I am so tired of Python. C is much better language";
     int count = replace_char(text, "e3");
 
     return 0;
