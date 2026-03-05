@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
 #define ARRAY_SIZE 40
 #define LINE_SIZE 256
 
