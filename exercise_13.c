@@ -11,6 +11,8 @@ int main() {
     int min = 0;
     int max = 0;
 
+    char line[10];
+
     printf("Enter the file name: ");
     scanf("%s", file);
 
