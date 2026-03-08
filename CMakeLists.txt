@@ -14,4 +14,9 @@ add_executable(METROPOLIA_CPP exercise_01.c
         exercise_09.c
         exercise_10.c
         exercise_11.c
-        exercise_12.c)
+        exercise_12.c
+        exercise_13.c
+        testcode.c
+        exercise_14.c
+        exercise_15.c
+        Project/studyplanner.c)
